@@ -1,0 +1,85 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  font-family: cairo;
+}
+
+.sec {
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  margin: 50vh auto;
+}
+
+.sec1 {
+  width: 50px;
+  height: 50px;
+  margin: 50px auto;
+  border-radius: 50%;
+  border: 7px solid #1a8ee9;
+  border-top-color: transparent;
+  position: absolute;
+  animation-name: sec-loop;
+  animation-duration: 1s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-play-state: paused;
+
+
+}
+
+.sec2 {
+  width: 70px;
+  height: 70px;
+  margin: 50px auto;
+  border-radius: 50%;
+  border: 7px solid #ffae08;
+  border-top-color: transparent;
+  position: absolute;
+  animation-name: sec-loop;
+  animation-duration: 1s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-delay: .3s;
+  animation-play-state: paused;
+  z-index: -2;
+}
+
+.sec3 {
+  width: 90px;
+  height: 90px;
+  margin: 50px auto;
+  border-radius: 50%;
+  border: 7px solid black;
+  border-top-color: transparent;
+  position: absolute;
+  animation-name: sec-loop;
+  animation-duration: 1s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-delay: .6s;
+  animation-play-state: paused;
+  z-index: -4;
+}
+
+.sec:hover div {
+  animation-play-state: running;
+}
+
+@keyframes sec-loop {
+  from {
+    transform: rotate(0turn);
+  }
+
+  to {
+    transform: rotate(1turn);
+  }
+}
